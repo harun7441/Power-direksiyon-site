@@ -1,0 +1,9 @@
+# Disable caching for CSS and JS during development
+<FilesMatch "\.(css|js)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</FilesMatch>
+
+# Or use version query string
+# Add ?v=1 to your CSS link in HTML to force reload
